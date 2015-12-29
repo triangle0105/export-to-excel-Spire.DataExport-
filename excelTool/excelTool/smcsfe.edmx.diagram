@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="cbb50464b10d4e2b90b608c6e74254a9" Name="Diagram1">
+        <EntityTypeShape EntityType="SMCSFEModel.C__MigrationHistory" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMCSFEModel.AdministrativePosts" Width="1.5" PointX="10.5" PointY="39.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMCSFEModel.AgreementTypes" Width="1.5" PointX="3" PointY="42.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMCSFEModel.AspNetRoles" Width="1.5" PointX="21.5" PointY="50.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMCSFEModel.AspNetUserClaims" Width="1.5" PointX="26" PointY="40.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMCSFEModel.AspNetUserLogins" Width="1.5" PointX="26" PointY="47.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMCSFEModel.AspNetUsers" Width="1.5" PointX="23.75" PointY="42.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMCSFEModel.Batches" Width="1.5" PointX="14.75" PointY="57.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMCSFEModel.Brands" Width="1.5" PointX="3" PointY="38.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMCSFEModel.BrandUsedNames" Width="1.5" PointX="5.25" PointY="38.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMCSFEModel.Cities" Width="1.5" PointX="3" PointY="48.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMCSFEModel.CityLevels" Width="1.5" PointX="0.75" PointY="44.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMCSFEModel.Comments" Width="1.5" PointX="20.75" PointY="40.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMCSFEModel.Counties" Width="1.5" PointX="5.25" PointY="48.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMCSFEModel.Degrees" Width="1.5" PointX="10.5" PointY="36.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMCSFEModel.Departments" Width="1.5" PointX="16.25" PointY="36.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMCSFEModel.DistributorProductLinks" Width="1.5" PointX="18.5" PointY="48.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMCSFEModel.Distributors" Width="1.5" PointX="10.25" PointY="46.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMCSFEModel.DistributorTypes" Width="1.5" PointX="8" PointY="54.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMCSFEModel.DistributorUsedNames" Width="1.5" PointX="12.5" PointY="52.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMCSFEModel.Doctors" Width="1.5" PointX="12.75" PointY="45" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMCSFEModel.EmployeeProvinces" Width="1.5" PointX="23.75" PointY="46.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMCSFEModel.EmployeeRoles" Width="1.5" PointX="21.5" PointY="32.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMCSFEModel.EmployeeRolesEmployees" Width="1.5" PointX="23.75" PointY="38.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMCSFEModel.Employees" Width="1.5" PointX="18.5" PointY="40.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMCSFEModel.EmployeeTerritories" Width="1.5" PointX="20.75" PointY="36.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMCSFEModel.FocusHospitals" Width="1.5" PointX="14.75" PointY="52.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMCSFEModel.FocusHospitalTypes" Width="1.5" PointX="12.5" PointY="68.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMCSFEModel.HospitalSections" Width="1.5" PointX="10.5" PointY="32.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMCSFEModel.InstitutionLevels" Width="1.5" PointX="5.25" PointY="41.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMCSFEModel.Institutions" Width="1.5" PointX="7.5" PointY="46.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMCSFEModel.InstitutionTiers" Width="1.5" PointX="5.25" PointY="52.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMCSFEModel.InstitutionTypes" Width="1.5" PointX="5.25" PointY="54.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMCSFEModel.InstitutionUsedNames" Width="1.5" PointX="15.5" PointY="48.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMCSFEModel.LeftNavigations" Width="1.5" PointX="20.75" PointY="58.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMCSFEModel.MarketingSalesTargets" Width="1.5" PointX="17.75" PointY="57" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMCSFEModel.OpentingStocks" Width="1.5" PointX="12.5" PointY="41.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMCSFEModel.Products" Width="1.5" PointX="12.5" PointY="55.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMCSFEModel.ProductUsedNames" Width="1.5" PointX="14.75" PointY="62" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMCSFEModel.ProfessionalCategories" Width="1.5" PointX="10.5" PointY="61.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMCSFEModel.Provinces" Width="1.5" PointX="0.75" PointY="48.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMCSFEModel.Qualifications" Width="1.5" PointX="10.5" PointY="63.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMCSFEModel.SalesBrandCities" Width="1.5" PointX="5.25" PointY="44.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMCSFEModel.SalesBrandInstitutions" Width="1.5" PointX="9.75" PointY="42.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMCSFEModel.SalesFlowPermissionRules" Width="1.5" PointX="20.75" PointY="61.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMCSFEModel.SalesFlowReviews" Width="1.5" PointX="26" PointY="43.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMCSFEModel.SalesFlows" Width="1.5" PointX="15.5" PointY="40.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMCSFEModel.SalesFlowsFiles" Width="1.5" PointX="20.75" PointY="44.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMCSFEModel.SalesPositions" Width="1.5" PointX="17.5" PointY="52.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMCSFEModel.SalesRevisions" Width="1.5" PointX="13.25" PointY="38.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMCSFEModel.SalesTargets" Width="1.5" PointX="19.75" PointY="52.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMCSFEModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMCSFEModel.TechnicalPosts" Width="1.5" PointX="10.5" PointY="66.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMCSFEModel.Territories" Width="1.5" PointX="20.5" PointY="65.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMCSFEModel.TerritoryReportLines" Width="1.5" PointX="22.75" PointY="65.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMCSFEModel.TerritoryRoles" Width="1.5" PointX="18.25" PointY="66.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMCSFEModel.TerritorySalesPositions" Width="1.5" PointX="22.75" PointY="52.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMCSFEModel.VirtualInstitutions" Width="1.5" PointX="9.75" PointY="77.625" IsExpanded="true" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_Doctors_dbo_AdministrativePosts_AdministrativePost_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_SalesBrandCities_dbo_AgreementTypes_AgreementType_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_SalesBrandInstitutions_dbo_AgreementTypes_AgreementType_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_User_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_AspNetUsers_dbo_Employees_EmployeeId" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_Batches_dbo_Products_Product_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_SalesFlows_dbo_Batches_Batches_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_BrandUsedNames_dbo_Brands_Brand_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_Products_dbo_Brands_Brand_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_SalesBrandCities_dbo_Brands_Brand_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_SalesBrandInstitutions_dbo_Brands_Brand_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_Cities_dbo_CityLevels_CityLevel_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_Cities_dbo_Provinces_Province_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_Counties_dbo_Cities_City_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_Distributors_dbo_Cities_City_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_Institutions_dbo_Cities_City_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_SalesBrandCities_dbo_Cities_City_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_Comments_dbo_Employees_Employee_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_Institutions_dbo_Counties_County_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_Doctors_dbo_Degrees_Degree_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_Employees_dbo_Departments_Department_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_DistributorProductLinks_dbo_Distributors_RelatedDistributorId" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_DistributorProductLinks_dbo_Products_RelatedProductId" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_Distributors_dbo_DistributorTypes_Type_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_DistributorUsedNames_dbo_Distributors_Distributor_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_InstitutionUsedNames_dbo_Distributors_Distributor_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_OpentingStocks_dbo_Distributors_Distributor_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_SalesFlows_dbo_Distributors_FromDistributor_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_SalesFlows_dbo_Distributors_ToDistributorId" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_SalesFlowsFiles_dbo_Distributors_Distributor_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_SalesPositions_dbo_Distributors_DistributorId" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_Doctors_dbo_Employees_ModifyByEmployee_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_Doctors_dbo_HospitalSections_HospitalSection_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_Doctors_dbo_Institutions_Institution_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_Doctors_dbo_ProfessionalCategories_ProfessionalCategory_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_Doctors_dbo_Qualifications_Qualification_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_Doctors_dbo_TechnicalPosts_TechnicalPost_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_EmployeeProvinces_dbo_Employees_Employee_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_EmployeeProvinces_dbo_Provinces_Province_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_EmployeeRolesEmployees_dbo_EmployeeRoles_EmployeeRole_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_EmployeeRolesEmployees_dbo_Employees_Employee_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_Employees_dbo_Employees_Parent_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_EmployeeTerritories_dbo_Employees_Employee_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_SalesFlowPermissionRules_dbo_Employees_EmployeeId" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_SalesFlowPermissionRules_dbo_Employees_ParentEmployeeId" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_SalesFlowReviews_dbo_Employees_SendToEmployee_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_SalesFlows_dbo_Employees_Employee_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_SalesFlowsFiles_dbo_Employees_Employee_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_EmployeeTerritories_dbo_Territories_Territory_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_FocusHospitals_dbo_FocusHospitalTypes_FocusHospitalType_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_FocusHospitals_dbo_Institutions_Institution_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_FocusHospitals_dbo_Products_Product_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_HospitalSections_dbo_HospitalSections_ParentHospitalSection_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_Institutions_dbo_InstitutionLevels_Level_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_Institutions_dbo_InstitutionTiers_Tier_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_Institutions_dbo_InstitutionTypes_Type_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_Institutions_dbo_Provinces_Province_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_InstitutionUsedNames_dbo_Institutions_Institution_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_SalesBrandInstitutions_dbo_Institutions_Institution_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_SalesFlows_dbo_Institutions_ToInstitutionId" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_SalesPositions_dbo_Institutions_InstitutionId" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_VirtualInstitutions_dbo_Institutions_InstitutionId" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_VirtualInstitutions_dbo_Institutions_ParentInstitutionId" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_LeftNavigations_dbo_LeftNavigations_Parent_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_MarketingSalesTargets_dbo_Products_Product_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_MarketingSalesTargets_dbo_Provinces_Province_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_OpentingStocks_dbo_Products_Product_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_ProductUsedNames_dbo_Products_Product_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_SalesFlows_dbo_Products_Product_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_SalesPositions_dbo_Products_ProductId" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_SalesFlowReviews_dbo_SalesFlowsFiles_SalesFlowsFile_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_SalesFlows_dbo_SalesFlowsFiles_SalesFlowsFile_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_SalesFlows_dbo_SalesRevisions_SalesRevision_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_SalesTargets_dbo_SalesPositions_SalesPosition_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_TerritorySalesPositions_dbo_SalesPositions_SalesPosition_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_Territories_dbo_TerritoryRoles_TerritoryRole_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_TerritoryReportLines_dbo_Territories_ParentTerritoryId" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_TerritoryReportLines_dbo_Territories_TerritoryId" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.FK_dbo_TerritorySalesPositions_dbo_Territories_Territory_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.AspNetUserRoles" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.BrandDoctors" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.CommentSalesFlowsFiles" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.DistributorEmployees" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.DistributorProducts" ManuallyRouted="false" />
+        <AssociationConnector Association="SMCSFEModel.LeftNavigationEmployees" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
