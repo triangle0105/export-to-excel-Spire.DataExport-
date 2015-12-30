@@ -8,19 +8,19 @@ namespace excelTool
 {
     public class EmployeeModel
     {
-        public System.Guid Id { get; set; }
+        public string Id { get; set; }
         public string Title { get; set; }
         public string Name { get; set; }
         public string Code { get; set; }
         public string Email { get; set; }
         public string CellPhoneNumber { get; set; }
-        public DateTime? JoinDate { get; set; }
-        public DateTime? LeaveDate { get; set; }
-        public DateTime? UpdateTime { get; set; }
+        public DateTime JoinDate { get; set; }
+        public DateTime LeaveDate { get; set; }
+        public DateTime UpdateTime { get; set; }
         public System.DateTime CreatedTime { get; set; }
         public bool IsDeleted { get; set; }
-        public Guid? Department_Id { get; set; }
-        public Guid? Parent_Id { get; set; }
+        public string Department_Id { get; set; }
+        public string Parent_Id { get; set; }
         public string WorkPhoneNumber { get; set; }
     }
 }

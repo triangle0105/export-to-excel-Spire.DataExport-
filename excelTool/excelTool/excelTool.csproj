@@ -48,6 +48,14 @@
       <HintPath>..\packages\NPOI.2.1.3.1\lib\net40\ICSharpCode.SharpZipLib.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="LinqToExcel, Version=1.10.1.0, Culture=neutral, PublicKeyToken=9c8ea65a58f03f1f, processorArchitecture=x86">
+      <HintPath>..\packages\LinqToExcel.1.10.1\lib\LinqToExcel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.5\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="NPOI, Version=2.1.3.1, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
       <HintPath>..\packages\NPOI.2.1.3.1\lib\net40\NPOI.dll</HintPath>
       <Private>True</Private>
@@ -62,6 +70,18 @@
     </Reference>
     <Reference Include="NPOI.OpenXmlFormats, Version=2.1.3.1, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
       <HintPath>..\packages\NPOI.2.1.3.1\lib\net40\NPOI.OpenXmlFormats.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Remotion, Version=1.13.52.2, Culture=neutral, PublicKeyToken=0669cf0452175907, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqToExcel.1.10.1\lib\Remotion.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Remotion.Data.Linq, Version=1.13.52.2, Culture=neutral, PublicKeyToken=0669cf0452175907, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqToExcel.1.10.1\lib\Remotion.Data.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Remotion.Interfaces, Version=1.13.52.2, Culture=neutral, PublicKeyToken=0669cf0452175907, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqToExcel.1.10.1\lib\Remotion.Interfaces.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Spire.DataExport, Version=3.5.10.2040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
@@ -154,6 +174,8 @@
     <Compile Include="Doctors.cs">
       <DependentUpon>smcsfe.tt</DependentUpon>
     </Compile>
+    <Compile Include="DtListConvert.cs" />
+    <Compile Include="DtToList.cs" />
     <Compile Include="EmployeeModel.cs" />
     <Compile Include="EmployeeProvinces.cs">
       <DependentUpon>smcsfe.tt</DependentUpon>
@@ -204,9 +226,11 @@
     <Compile Include="LeftNavigations.cs">
       <DependentUpon>smcsfe.tt</DependentUpon>
     </Compile>
+    <Compile Include="LinqToExcel.cs" />
     <Compile Include="MarketingSalesTargets.cs">
       <DependentUpon>smcsfe.tt</DependentUpon>
     </Compile>
+    <Compile Include="NPOIExcelHelper.cs" />
     <Compile Include="OpentingStocks.cs">
       <DependentUpon>smcsfe.tt</DependentUpon>
     </Compile>
@@ -227,6 +251,7 @@
     <Compile Include="Qualifications.cs">
       <DependentUpon>smcsfe.tt</DependentUpon>
     </Compile>
+    <Compile Include="reflect.cs" />
     <Compile Include="SalesBrandCities.cs">
       <DependentUpon>smcsfe.tt</DependentUpon>
     </Compile>

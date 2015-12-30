@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -74,6 +75,48 @@ namespace excelTool
                 }
             }
             return result;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var fileDialog = new OpenFileDialog { Filter = "test|*.xls;*.xlsx", InitialDirectory = "D:\\" };
+            if (fileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string fileName = fileDialog.FileName;//得到文件所在位置。
+                using (var excelhelper = new NPOIExcelHelper(fileName))
+                {
+                    DataTable dt = excelhelper.ExcelToDataTable("Sheet 1", true);
+                    var enu = dt.AsEnumerable();
+                    var list = DtListConvert.ConvertToList<EmployeeModel>(dt);
+                    var a = list.Where(n => true).ToList();
+                }
+            }
+            //var fileDialog = new OpenFileDialog { Filter = "test|*.xls;*.xlsx", InitialDirectory = "D:\\" };
+            //if (fileDialog.ShowDialog() == DialogResult.OK)
+            //{
+            //    string fileName = fileDialog.FileName;//得到文件所在位置。
+            //    //var fsRead = new FileStream(fileName, FileMode.Open);
+            //    //var dt = ExcelHelper.RenderDataTableFromExcel(fsRead, 0, 0);
+
+            //    //LinqToExcel
+            //    var list = LinqToExcel.GetDataFromExcel<EmployeeModel>(fileName).ToList();
+
+            //    //var list = DtListConvert.ConvertToList<EmployeeModel>(dt);
+            //    //var list = DtToList<EmployeeModel>.ConvertToModel(dt);
+            //    var a = list.Where(n => true).ToList();
+            //}
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Mapper.Reset();
+            Mapper.CreateMap<Employees, EmployeeModel>();
+            using (var db = new SMCSFEEntities())
+            {
+                var employeeList = db.Employees.Select(Mapper.Map<Employees, EmployeeModel>).ToList();
+                var excelHelper = new NPOIExcelHelper("D://123.xlsx");
+                excelHelper.DataTableToExcel(ListToDataTable(employeeList), "123", true);
+            }
         }
     }
 }
