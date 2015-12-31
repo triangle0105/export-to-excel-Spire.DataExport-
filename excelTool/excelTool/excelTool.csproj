@@ -175,7 +175,6 @@
       <DependentUpon>smcsfe.tt</DependentUpon>
     </Compile>
     <Compile Include="DtListConvert.cs" />
-    <Compile Include="DtToList.cs" />
     <Compile Include="EmployeeModel.cs" />
     <Compile Include="EmployeeProvinces.cs">
       <DependentUpon>smcsfe.tt</DependentUpon>
@@ -205,6 +204,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helper.cs" />
     <Compile Include="HospitalSections.cs">
       <DependentUpon>smcsfe.tt</DependentUpon>
     </Compile>

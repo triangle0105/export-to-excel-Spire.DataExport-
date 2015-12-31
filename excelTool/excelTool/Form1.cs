@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -86,25 +87,12 @@ namespace excelTool
                 using (var excelhelper = new NPOIExcelHelper(fileName))
                 {
                     DataTable dt = excelhelper.ExcelToDataTable("Sheet 1", true);
-                    var enu = dt.AsEnumerable();
-                    var list = DtListConvert.ConvertToList<EmployeeModel>(dt);
+                    //DataTable dt = excelhelper.ExcelToDataTable(0, 0);
+                    //var enu = dt.AsEnumerable();
+                    var list = dt.DataTableToList<EmployeeModel>();
                     var a = list.Where(n => true).ToList();
                 }
             }
-            //var fileDialog = new OpenFileDialog { Filter = "test|*.xls;*.xlsx", InitialDirectory = "D:\\" };
-            //if (fileDialog.ShowDialog() == DialogResult.OK)
-            //{
-            //    string fileName = fileDialog.FileName;//得到文件所在位置。
-            //    //var fsRead = new FileStream(fileName, FileMode.Open);
-            //    //var dt = ExcelHelper.RenderDataTableFromExcel(fsRead, 0, 0);
-
-            //    //LinqToExcel
-            //    var list = LinqToExcel.GetDataFromExcel<EmployeeModel>(fileName).ToList();
-
-            //    //var list = DtListConvert.ConvertToList<EmployeeModel>(dt);
-            //    //var list = DtToList<EmployeeModel>.ConvertToModel(dt);
-            //    var a = list.Where(n => true).ToList();
-            //}
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -116,6 +104,24 @@ namespace excelTool
                 var employeeList = db.Employees.Select(Mapper.Map<Employees, EmployeeModel>).ToList();
                 var excelHelper = new NPOIExcelHelper("D://123.xlsx");
                 excelHelper.DataTableToExcel(ListToDataTable(employeeList), "123", true);
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            var path = "D://123.xlsx";
+            string connstring = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + path + ";Extended Properties='Excel 8.0;HDR=NO;IMEX=1';";
+            using (var conn = new OleDbConnection(connstring))
+            {
+                conn.Open();
+                DataTable sheetsName = conn.GetOleDbSchemaTable(OleDbSchemaGuid.Tables, new object[] { null, null, null, "Table" });  //得到所有sheet的名字 
+                string firstSheetName = sheetsName.Rows[0][2].ToString();   //得到第一个sheet的名字    
+                string sql = string.Format("SELECT * FROM [{0}]","Sheet 1");  //查询字符串 
+                var ada = new OleDbDataAdapter(sql, connstring);
+                var set = new DataSet();
+                ada.Fill(set);
+                var list= set.Tables[0];
+                var type = list.GetType();
             }
         }
     }

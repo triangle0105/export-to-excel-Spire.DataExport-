@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -24,6 +25,43 @@ namespace excelTool
             disposed = false;
         }
 
+        private static string GetCellValue(ICell cell)
+        {
+            if (cell == null)
+                return string.Empty;
+            switch (cell.CellType)
+            {
+                case CellType.Blank: //空数据类型 这里类型注意一下，不同版本NPOI大小写可能不一样,有的版本是Blank（首字母大写)
+                    return string.Empty;
+                case CellType.Boolean: //bool类型
+                    return cell.BooleanCellValue.ToString();
+                case CellType.Error:
+                    return cell.ErrorCellValue.ToString(CultureInfo.InvariantCulture);
+                case CellType.Numeric: //数字类型
+                    if (DateUtil.IsCellDateFormatted(cell))//日期类型
+                    {
+                        return cell.DateCellValue.ToString(CultureInfo.InvariantCulture);
+                    }
+                    else //其它数字
+                    {
+                        return cell.NumericCellValue.ToString(CultureInfo.InvariantCulture);
+                    }
+                case CellType.Unknown: //无法识别类型
+                default: //默认类型
+                    return cell.ToString();//
+                case CellType.String: //string 类型
+                    return cell.StringCellValue;
+                case CellType.Formula: //带公式类型
+                    try
+                    {
+                        return cell.StringCellValue;
+                    }
+                    catch
+                    {
+                        return cell.ToString();
+                    }
+            }
+        }
         /// <summary>
         /// 将DataTable数据导入到excel中
         /// </summary>
@@ -109,11 +147,12 @@ namespace excelTool
 
                 if (sheetName != null)
                 {
-                    sheet = workbook.GetSheet(sheetName);
-                    if (sheet == null) //如果没有找到指定的sheetName对应的sheet，则尝试获取第一个sheet
+                    sheet = workbook.GetSheet(sheetName) ?? workbook.GetSheetAt(0);
+                    
+                    for (int iHide = 0; iHide <= 40; iHide++) //设置隐藏列 为 不隐藏
                     {
-                        sheet = workbook.GetSheetAt(0);
-                    }
+                        sheet.SetColumnHidden(iHide, false);
+                    } 
                 }
                 else
                 {
@@ -156,8 +195,16 @@ namespace excelTool
                         DataRow dataRow = data.NewRow();
                         for (int j = row.FirstCellNum; j < cellCount; ++j)
                         {
-                            if (row.GetCell(j) != null) //同理，没有数据的单元格都默认是null
-                                dataRow[j] = row.GetCell(j).ToString();
+                            dataRow[j] = GetCellValue(row.GetCell(j));
+                            //if (row.GetCell(j) != null) //同理，没有数据的单元格都默认是null
+                            //if (row.GetCell(j).CellType == CellType.Formula)//带公式的类型
+                            //{
+                            //    dataRow[j] = row.GetCell(j).StringCellValue;
+                            //}
+                            //else
+                            //{
+                            //    dataRow[j] = row.GetCell(j).ToString();
+                            //}
                         }
                         data.Rows.Add(dataRow);
                     }
@@ -170,6 +217,56 @@ namespace excelTool
                 Console.WriteLine("Exception: " + ex.Message);
                 return null;
             }
+        }
+
+        public DataTable ExcelToDataTable(int sheetIndex, int headerRowIndex)
+        { var table = new DataTable();
+            try
+            {
+                fs = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+                if (fileName.IndexOf(".xlsx", System.StringComparison.Ordinal) > 0) // 2007版本
+                    workbook = new XSSFWorkbook(fs);
+                else if (fileName.IndexOf(".xls", System.StringComparison.Ordinal) > 0) // 2003版本
+                    workbook = new HSSFWorkbook(fs);
+
+                var sheet = (HSSFSheet) workbook.GetSheetAt(sheetIndex);
+
+
+
+                var headerRow = (HSSFRow) sheet.GetRow(headerRowIndex);
+                int cellCount = headerRow.LastCellNum;
+
+                for (int i = headerRow.FirstCellNum; i < cellCount; i++)
+                {
+                    var column = new DataColumn(headerRow.GetCell(i).StringCellValue);
+                    table.Columns.Add(column);
+                }
+
+                int rowCount = sheet.LastRowNum;
+
+                for (int i = (sheet.FirstRowNum + 1); i <= sheet.LastRowNum; i++)
+                {
+                    var row = (HSSFRow) sheet.GetRow(i);
+                    DataRow dataRow = table.NewRow();
+
+                    for (int j = row.FirstCellNum; j < cellCount; j++)
+                    {
+                        if (row.GetCell(j) != null)
+
+                            dataRow[j] = row.GetCell(j).ToString();
+                    }
+
+                    table.Rows.Add(dataRow);
+                }
+
+                workbook = null;
+                sheet = null;
+
+            }
+            catch (Exception ex)
+            {
+            }
+            return table;
         }
 
         public void Dispose()
