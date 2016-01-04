@@ -46,12 +46,33 @@ namespace excelTool
                                     }
                                     else if (propertyType == typeof(DateTime?))
                                     {
-                                        var date = (DateTime?)prop.GetValue(string.IsNullOrEmpty(row[prop.Name].ToString()) ? (DateTime?)null : row[prop.Name], null);
+                                        //var date = (DateTime?)prop.GetValue(string.IsNullOrEmpty(row[prop.Name].ToString()) ? (DateTime?)null : row[prop.Name], null);
+                                        //if (row[prop.Name].ToString() != "")
+                                        //{
+                                        //    try
+                                        //    {
+                                        //        propertyInfo.SetValue(
+                                        //            obj,
+                                        //            (DateTime?)DateTime.ParseExact(row[prop.Name].ToString(), "MM/dd/yyyy HH:mm:ss", null), null);
+                                        //    }
+                                        //    catch
+                                        //    {
+                                        //        propertyInfo.SetValue(obj, (DateTime?)DateTime.ParseExact(row[prop.Name].ToString(), "MM/dd/yyyy", null), null);
+                                        //    }
+                                        //}
+                                        //else
+                                        //    propertyInfo.SetValue(obj, null, null);
+
+
+                                        //var date = string.IsNullOrEmpty(row[prop.Name].ToString()) ? (DateTime?)null :(DateTime?) DateTime.ParseExact(row[prop.Name].ToString(),"MM/dd/yyyy HH:mm:ss",null);
+                                        var date = string.IsNullOrEmpty(row[prop.Name].ToString()) ? (DateTime?)null : (DateTime?)Convert.ChangeType(row[prop.Name], typeof(DateTime));
                                         if (date.HasValue)
                                         {
                                             DateTime? newDate = DateTime.SpecifyKind(date.Value, DateTimeKind.Utc);
                                             prop.SetValue(obj, newDate, null);
                                         }
+                                        
+                                            
                                     }
                                     break;
                                 default:
